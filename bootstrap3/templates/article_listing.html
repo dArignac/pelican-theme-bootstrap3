@@ -1,0 +1,5 @@
+{% for article in articles_page.object_list %}
+    {% with is_index = 1 %}
+        {% include 'article_include.html' %}
+    {% endwith %}
+{% endfor %}

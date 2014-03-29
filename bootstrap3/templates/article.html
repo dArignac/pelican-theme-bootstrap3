@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    {{ super() }}
+    {% for keyword in article.keywords %}
+        <meta name="keywords" contents="{{keyword}}" />
+    {% endfor %}
+    {% for description in article.description %}
+        <meta name="description" contents="{{description}}" />
+    {% endfor %}
+    {% for tag in article.tags %}
+        <meta name="tags" contents="{{tag}}" />
+    {% endfor %}
+    {% if 'code' in article.tags %}<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.min.css" />{% endif %}
+{% endblock head %}
+
+
+{% block left %}
+    {% include 'article_include.html' %}
+{% endblock %}

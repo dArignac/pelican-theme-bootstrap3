@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ super() }}
+    {% include 'pygment_head.html' %}
+{% endblock head %}
+
+
+{% block left %}
+    {% include 'article_listing.html' %}
+    {% include 'pagination.html' %}
+{% endblock %}

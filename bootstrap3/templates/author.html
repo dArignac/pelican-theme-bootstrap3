@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    {{ super() }}
+    {% include 'pygment_head.html' %}
+{% endblock head %}
+
+
+{% block left %}
+    <h3 class="tag">Articles by author <span class="label label-primary">{{ author }}</span></h3>
+    {% include 'article_listing.html' %}
+    {% include 'pagination.html' %}
+{% endblock %}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap 3.1.0 -->
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+        {% block head %}
+            {% if FEED_ALL_ATOM %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+            {% endif %}
+            {% if FEED_ALL_RSS %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+            {% endif %}
+            {% if FEED_ATOM %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+            {% endif %}
+            {% if FEED_RSS %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+            {% endif %}
+            {% if CATEGORY_FEED_ATOM and category %}
+                <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+            {% endif %}
+            {% if CATEGORY_FEED_RSS and category %}
+                <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+            {% endif %}
+            {% if TAG_FEED_ATOM and tag %}
+                <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+            {% endif %}
+            {% if TAG_FEED_RSS and tag %}
+                <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+            {% endif %}
+        {% endblock head %}
+        <title>{{ SITENAME }}</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-header">
+                            <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+                            <p class="hidden-xs">my five cents about software development</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="row">
+                <div class="col-lg-10">
+                    <section role="main">
+                    {% block left %}{% endblock left %}
+                    </section>
+                </div>
+                <div class="col-lg-2">
+                    <aside role="complementary">
+                        <nav role="navigation">
+                            <ul class="nav nav-pills nav-stacked">
+                                {% if DISPLAY_PAGES_ON_MENU -%}
+                                    {% for pg in PAGES %}
+                                        {% if pg.title != '404' %}
+                                            <li{% if pg == page %} class="active"{% endif %}>
+                                                <a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </ul>
+                        </nav>
+                        <section class="tags hidden-xs">
+                            <strong>Tags</strong>
+                            {% include "tagcloud.html" %}
+                        </section>
+                    </aside>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="text-center">&copy Alexander Herrmann 2007 - 2014</p>
+                        <p class="text-center hidden-xs">Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

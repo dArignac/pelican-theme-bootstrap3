@@ -1,0 +1,40 @@
+<article{% if is_index %} class="extra-margin"{% endif %}>
+    <header>
+        <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date|strftime('%B %d, %Y') }}</time>
+        <h2>{% if is_index %}<a href="{{ SITEURL }}/{{ article.url }}">{% endif %}{{ article.title }}{% if is_index %}</a>{% endif %}</h2>
+    </header>
+    <div>{{ article.content }}</div>
+    <footer>
+        <small>
+            Written by <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+            on <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
+            in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+            {% if article.tags %} - Tagged with: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %} {% endfor %}{% endif %}
+            {% if not is_index and article.related_posts %}
+                <ul class="related-posts">
+                    <li>
+                        Related Posts
+                        <ul>
+                            {% for related_post in article.related_posts %}
+                                <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            {% endif %}
+        </small>
+    </footer>
+    {% if not is_index and DISQUS_ID|length > 0 %}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = '{{ DISQUS_ID }}';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    {% endif %}
+</article>

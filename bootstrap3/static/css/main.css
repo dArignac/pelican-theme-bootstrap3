@@ -1,0 +1,113 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+span.icon img {
+    vertical-align: top;
+}
+
+time {
+    color: #888;
+    text-transform: uppercase;
+}
+
+h1 a,
+h1 a:active,
+h1 a:hover,
+h1 a:link,
+h2 a,
+h2 a:active,
+h2 a:hover,
+h2 a:link,
+h3 a,
+h3 a:active,
+h3 a:hover,
+h3 a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+article.extra-margin {
+    margin-bottom: 40px;
+}
+
+article footer {
+    border-top: 1px dashed #888;
+    color: #888;
+    margin: 20px 0 0;
+    padding: 5px 0 10px;
+}
+
+body .container > footer {
+    margin-top: 20px;
+}
+
+h3.tag {
+    margin-bottom: 40px;
+}
+
+ul.tagcloud {
+    list-style: none;
+    padding: 0;
+}
+
+ul.tagcloud li {
+    display: inline-block;
+}
+
+li.tag-0 {
+    font-size: 200%;
+}
+
+li.tag-1 {
+    font-size: 190%;
+}
+
+li.tag-2 {
+    font-size: 180%;
+}
+
+li.tag-3 {
+    font-size: 170%;
+}
+
+li.tag-4 {
+    font-size: 160%;
+}
+
+li.tag-5 {
+    font-size: 150%;
+}
+
+li.tag-6 {
+    font-size: 140%;
+}
+
+li.tag-7 {
+    font-size: 130%;
+}
+
+li.tag-8 {
+    font-size: 120%;
+}
+
+li.tag-9 {
+    font-size: 110%;
+}
+
+li.tag-10 {
+    font-size: 100%;
+}
+
+section.tags {
+    margin-top: 10px;
+}
+
+ul.related-posts {
+    list-style: none;
+    padding-left: 0;
+}
