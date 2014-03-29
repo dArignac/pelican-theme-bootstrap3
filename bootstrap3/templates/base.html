@@ -80,7 +80,7 @@
             <footer>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p class="text-center">&copy Alexander Herrmann 2007 - 2014</p>
+                        {% if COPYRIGHT %}<p class="text-center">{{ COPYRIGHT }}</p>{% endif %}
                         <p class="text-center hidden-xs">Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.</p>
                     </div>
                 </div>
