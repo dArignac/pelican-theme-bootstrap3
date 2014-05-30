@@ -57,6 +57,7 @@ ul.tagcloud {
 
 ul.tagcloud li {
     display: inline-block;
+    margin-right: 5px;
 }
 
 li.tag-0 {
