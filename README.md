@@ -7,7 +7,10 @@ Texts are English.
 Usage
 -----
 
-Put the *bootstrap3* folder somewhere and point the THEME setting to this place.
+Download the current version, extract and put the *bootstrap3* folder somewhere and point the THEME setting in your *pelicanconf.py* to this place. For example:
+
+#
+    THEME = '/home/me/pelican/pelican-theme-bootstrap3/bootstrap3/'
 
 Code highlighting
 -----------------
@@ -31,4 +34,4 @@ There are some minor configurations available (set within *pelicanconf.py*):
 
 * COPYRIGHT: will display the set text on the page bottom, useful for a copyright info
 * DISQUS_ID: if set to a value, will include [Disqus](http://disqus.com/) comment code
-* THEME_BOOTSTRAP3_EXCLUDE_TAGS_FROM_TAGCLOUD: list of tag names that shall not be included in the tag cloud. E.g. you might find it useful to exclude the "code" tag (see [Code highlighting](#code-highlighting)).
+* EXCLUDE_TAGS_FROM_TAGCLOUD: list of tag names that shall not be included in the tag cloud. E.g. you might find it useful to exclude the "code" tag (see [Code highlighting](#code-highlighting)).

@@ -1,6 +1,6 @@
 <ul class="tagcloud">
     {% for tag in tag_cloud %}
-        {% if tag.0 not in THEME_BOOTSTRAP3_EXCLUDE_TAGS_FROM_TAGCLOUD %}
+        {% if tag.0 not in EXCLUDE_TAGS_FROM_TAGCLOUD %}
             <li class="tag-{{ tag.1 }}"><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a></li>
         {% endif %}
     {% endfor %}
