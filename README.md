@@ -7,7 +7,7 @@ Texts are English.
 Usage
 -----
 
-Download the current version, extract and put the *bootstrap3* folder somewhere and point the THEME setting in your *pelicanconf.py* to this place. For example:
+Download the current release, extract and put the *bootstrap3* folder somewhere and point the THEME setting in your *pelicanconf.py* to this place. For example:
 
 #
     THEME = '/home/me/pelican/pelican-theme-bootstrap3/bootstrap3/'
