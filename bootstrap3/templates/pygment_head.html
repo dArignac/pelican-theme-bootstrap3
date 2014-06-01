@@ -3,7 +3,7 @@
     {% if not pygment_included %}
         {% if 'code' in article.tags %}
             {% set pygment_included = 1 %}
-            <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.min.css" />
+            <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css" />
         {% endif %}
     {% endif %}
 {% endfor %}
