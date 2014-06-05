@@ -39,5 +39,7 @@ There are some minor configurations available (set within *pelicanconf.py*):
 Release log
 -----------
 
+* 0.2.0
+    * add categories to navigation
 * 0.1.0
     * initial release
