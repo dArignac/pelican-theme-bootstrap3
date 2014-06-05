@@ -40,6 +40,7 @@ Release log
 -----------
 
 * 0.2.0
-    * add categories to navigation
+    * added categories to navigation
+    * added [MENUITEMS](http://docs.getpelican.com/en/3.3.0/settings.html#themes) to navigation
 * 0.1.0
     * initial release

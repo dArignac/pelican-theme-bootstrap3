@@ -61,7 +61,12 @@
                     <aside role="complementary">
                         <nav role="navigation">
                             <ul class="nav nav-pills nav-stacked">
-                                {% if DISPLAY_PAGES_ON_MENU -%}
+                                {% if MENUITEMS %}
+                                    {% for title, link in MENUITEMS %}
+                                        <li><a href="{{ link }}">{{ title }}</a></li>
+                                    {% endfor %}
+                                {% endif %}
+                                {% if DISPLAY_PAGES_ON_MENU %}
                                     {% for pg in PAGES %}
                                         {% if pg.title != '404' %}
                                             <li{% if pg == page %} class="active"{% endif %}>
