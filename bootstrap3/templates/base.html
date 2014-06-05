@@ -7,6 +7,8 @@
         <!-- Bootstrap 3.1.0 -->
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css">
         <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
         <!-- Styles -->
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/main.css" />
         {% block head %}
@@ -67,6 +69,18 @@
                                             </li>
                                         {% endif %}
                                     {% endfor %}
+                                {% endif %}
+                                {% if DISPLAY_CATEGORIES_ON_MENU %}
+                                    <li class="dropdown">
+                                        <a role="button" data-toggle="dropdown" href="#">Categories <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="{{ SITEURL }}/categories.html">List all</a></li>
+                                            <li class="divider"></li>
+                                            {% for cat, null in categories %}
+                                                <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
                                 {% endif %}
                             </ul>
                         </nav>
