@@ -12,6 +12,12 @@ Download the [latest release](https://github.com/dArignac/pelican-theme-bootstra
 #
     THEME = '/home/me/pelican/bootstrap3/'
 
+Also configure the Jinja2 extension "with":
+
+#
+    JINJA_EXTENSIONS = ['jinja2.ext.with_']
+
+
 Code highlighting
 -----------------
 
