@@ -12,7 +12,7 @@
     {% for tag in article.tags %}
         <meta name="tags" contents="{{tag}}" />
     {% endfor %}
-    {% if 'code' in article.tags %}<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.min.css" />{% endif %}
+    {% if 'code' in article.tags %}<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css" />{% endif %}
 {% endblock head %}
 
 
