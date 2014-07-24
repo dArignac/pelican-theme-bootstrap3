@@ -45,6 +45,13 @@ There are some minor configurations available (set within *pelicanconf.py*):
 Release log
 -----------
 
+* 1.0.1
+    * fixed wrong link to pygments stylesheet
+* 1.0.0
+    * fixed wrong package naming, now "extended_sitemap" instead "extended-sitemap"
+    * added unit tests
+    * raise ConfigurationError if TIMEZONE setting is not set
+    * tags are now sorted by name
 * 0.2.0
     * added categories to navigation
     * added [MENUITEMS](http://docs.getpelican.com/en/3.3.0/settings.html#themes) to navigation
