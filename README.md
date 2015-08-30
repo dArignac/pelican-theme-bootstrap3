@@ -25,12 +25,15 @@ Pelican comes with [pygments](http://docs.getpelican.com/en/3.3.0/getting_starte
 I do not want to always include the pygments css files, so it is only included if a post has the tag **code** (works on all pages).
 
 
-Plugin support
---------------
+Plugin usage
+------------
 
-Theme supports the following plugins:
+Theme uses the following plugins:
 
 * [Related posts](https://github.com/getpelican/pelican-plugins/tree/master/related_posts), displayed only on detail pages
+* [tag_cloud](https://github.com/getpelican/pelican-plugins/tree/master/tag_cloud), displayed on the right of each page
+
+For configuration see next chapter.
 
 
 Configuration
@@ -41,6 +44,9 @@ There are some minor configurations available (set within *pelicanconf.py*):
 * COPYRIGHT: will display the set text on the page bottom, useful for a copyright info
 * DISQUS_ID: if set to a value, will include [Disqus](http://disqus.com/) comment code
 * EXCLUDE_TAGS_FROM_TAGCLOUD: list of tag names that shall not be included in the tag cloud. E.g. you might find it useful to exclude the "code" tag (see [Code highlighting](#code-highlighting)).
+* PLUGIN_PATHS: add the path to the pelican plugins checkout, see [pelican-plugins](https://github.com/getpelican/pelican-plugins#how-to-use-plugins) how to set up correctly
+* PLUGINS: add the plugins *tag_cloud* (since Pelican 3.6) and *related_posts* to the list
+    * ```PLUGINS = ['tag_cloud', 'related_posts']```
 
 Release log
 -----------
