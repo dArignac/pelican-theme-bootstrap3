@@ -1,6 +1,7 @@
 <article{% if is_index %} class="extra-margin"{% endif %}>
     <header>
         <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date|strftime('%B %d, %Y') }}</time>
+        {% if article.modified %} (updated on <time datetime="{{ article.modified.isoformat() }}" pubdate>{{ article.modified|strftime('%B %d, %Y') }}</time>){% endif %}
         <h2>{% if is_index %}<a href="{{ SITEURL }}/{{ article.url }}">{% endif %}{{ article.title }}{% if is_index %}</a>{% endif %}</h2>
     </header>
     <div>{{ article.content }}</div>
@@ -8,6 +9,7 @@
         <small>
             Written by <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
             on <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
+            {% if article.modified %} (modified on <abbr class="published" title="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</abbr>) {% endif %}
             in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
             {% if article.tags %} - Tagged with: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %} {% endfor %}{% endif %}
             {% if not is_index and article.related_posts %}
