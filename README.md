@@ -51,6 +51,8 @@ There are some minor configurations available (set within *pelicanconf.py*):
 Release log
 -----------
 
+* 0.3.0
+    * added display of modification date of content
 * 0.2.1
     * fixed wrong link to pygments stylesheet
 * 0.2.0
