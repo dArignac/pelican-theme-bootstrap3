@@ -52,6 +52,7 @@ Release log
 -----------
 
 * TBA
+    * use CDN version of bootstrap instead old, static bundled one ([#6](https://github.com/dArignac/pelican-theme-bootstrap3/issues/6))
     * fixed link in header ([#4](https://github.com/dArignac/pelican-theme-bootstrap3/issues/4))
 * 0.3.0
     * added display of modification date of content
