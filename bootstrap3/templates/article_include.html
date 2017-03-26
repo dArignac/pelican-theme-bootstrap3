@@ -1,6 +1,6 @@
 <article{% if is_index %} class="extra-margin"{% endif %}>
     <header>
-        <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date|strftime('%B %d, %Y') }}</time>
+        {% if article.pin %}<span class="glyphicon glyphicon-pushpin"></span> {% endif %}<time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date|strftime('%B %d, %Y') }}</time>
         {% if article.modified %} (updated on <time datetime="{{ article.modified.isoformat() }}" pubdate>{{ article.modified|strftime('%B %d, %Y') }}</time>){% endif %}
         <h2>{% if is_index %}<a href="{{ SITEURL }}/{{ article.url }}">{% endif %}{{ article.title }}{% if is_index %}</a>{% endif %}</h2>
     </header>
