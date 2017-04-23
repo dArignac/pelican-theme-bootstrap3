@@ -67,7 +67,7 @@
                                     {% endfor %}
                                 {% endif %}
                                 {% if DISPLAY_PAGES_ON_MENU %}
-                                    {% for pg in PAGES %}
+                                    {% for pg in pages %}
                                         {% if pg.title != '404' %}
                                             <li{% if pg == page %} class="active"{% endif %}>
                                                 <a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a>

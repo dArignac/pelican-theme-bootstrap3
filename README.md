@@ -55,6 +55,7 @@ Release log
     * added pin icon to article if [pin_to_top](http://www.shakedos.com/2013/Dec/03/pelican-pin-post-to-top.html) extension is used and article is pinned ([#2](https://github.com/dArignac/pelican-theme-bootstrap3/issues/2))
     * use CDN version of bootstrap instead old, static bundled one ([#6](https://github.com/dArignac/pelican-theme-bootstrap3/issues/6))
     * fixed link in header ([#4](https://github.com/dArignac/pelican-theme-bootstrap3/issues/4))
+    * fixed listing of pages in sidebar
 * 0.3.0
     * added display of modification date of content
 * 0.2.1
