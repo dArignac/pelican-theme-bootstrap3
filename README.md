@@ -51,7 +51,7 @@ There are some minor configurations available (set within *pelicanconf.py*):
 Release log
 -----------
 
-* TBA
+* 0.4.0
     * support for Pelican 4 ([#7](https://github.com/dArignac/pelican-theme-bootstrap3/issues/7))
     * added pin icon to article if [pin_to_top](http://www.shakedos.com/2013/Dec/03/pelican-pin-post-to-top.html) extension is used and article is pinned ([#2](https://github.com/dArignac/pelican-theme-bootstrap3/issues/2))
     * use CDN version of bootstrap instead old, static bundled one ([#6](https://github.com/dArignac/pelican-theme-bootstrap3/issues/6))
